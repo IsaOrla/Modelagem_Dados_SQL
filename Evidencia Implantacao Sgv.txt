@@ -1,0 +1,46 @@
+Evidência da implantação (INFORMAÇÂO DOCUMENTAL) 
+
+Cap 1 - Imersão no Universo dos Dados - Modelagem Relacional e Implementação do Banco de Dados
+
+ESTUDO DE CASO: SGV (SISTEMA DE GERENCIAMENTO DE VÍDEOS)
+
+ETAPA 1:
+Foi aplicado o MER- Modelo Entidade Relacionamento 
+
+Idealmente, todo projeto de criação de um banco de dados deve passar por três etapas de desenvolvimento: 
+▪Modelo Conceitual;
+▪Modelo Lógico;
+▪Modelo Físico
+
+ Primeiramente houve uma leitura do estudo de caso para a empresa MELHORES COMPRAS em que foi preciso compreeender as nescessidades da empresa, o negócio, processos e estratégia.
+
+MODELO CONCEITUAL 
+ Representação da realidade (conforme o esqueleto do sistema), para análise em alto nível de abstração, não tivemos ainda preocupação com as tecnologias para implantação. 
+  
+MODELO LÒGICO 
+
+ Modelo conceitual feito, demos ínicio ao modelo lógico apresentado no Oracle SQL Developer Data Modeler. Nele começamos com a criação das entidades (reconhecendo-as, nomeando-as), criamos a regra 24 do modelo de négocios do Projeto (implementamos no modelo lógico e criamos um arquivo em texto para descrevê-la), implementamos a obrigatoriedade e opcionalidade para cada atributo, definimos os relacionamentos e suas cardinalidades, chaves de acesso, comentários, integridade referencial e as regras de normalização, assim finalizado, salvamos um arquivo com extensão .dmd e e uma pasta com vários arquivos relacionados ao mesmo.
+
+Neste exemplo de imagem da pasta "Evidencia Implantacao" (Imagem 1 Modelo Logico.png) vemos a entidade PRODUTO (T_SGV_PRODUTO) em sua estrutura lógica com seus respectivos atributos, chaves de acesso e respeitando as regras de normalização. Já no exemplo da segunda imagem do modelo lógico da pasta "Evidencia Implantacao"  (Imagem 2 Modelo Logico.png) mostra um exemplo de relacionamento 1:1 aplicando o arco da generalização e especialização entre as entidades CLIENTE e PES_FISICA/PES_JURIDICA. 
+
+MODELO RELACIONAL (Físico)
+
+ Depois que o modelo lógico tomou forma e ficou pronto seguimos as instruções da atividade e clicamos no icon com duas setas ("Engenharia para modelo relacional") o qual gerou um modelo relacional a partir do lógico. Nesta etapa, os formalismos aplicados ao banco de dados relacional do projeto SGV são considerados, tais como definição do tipo de dados, do tamanho do campo, regras para manutenção de integridade dos dados, normalização das tabelas, índices, etc...
+
+Neste exemplo de imagem do modelo relacional da pasta "Evidencia Implantacao"  (Imagem 1 Modelo Relacional.png) observa-se a entidade FUNCIONÁRIO (T_SGV_FUNCIONARIO) em sua estrutura relacional e/ou física com seus tipos de dados (NUMBER, VARCHAR2, DATE) e índices bem destacados (PRIMARY KEY, UNIQUE). 
+
+ETAPA 2:
+SQL
+
+Nesta etapa um banco de dados é implementado após a representação do modelo relacional (Físico) de dados e aplicação da normalização/desnormalização de dados. Na aba do modelo relacional no Oracle Data Modeler se encontra uma figura de um banco de dados que ao clicarmos gerou um script DDL da linguagem SQL que são os comandos (CREATE, ALTER, DROP, COMMENT) que definiram as estruturas físicas do banco de dados do projeto SGV.  
+
+Na primeira imagem relacionada a SQL da pasta "Evidencia Implantacao"  (Imagem 1 SQL.png) mostra no Editor de Arquivo DDL do Oracle o script gerado.
+
+Após salvar o script com 0 erros, abrimos o SGBD relacional escolhido, o Oracle SQL Developer para checar se tinhamos salvado o arquivo do script corretamente em sua pasta Script, realizamos a execução do mesmo e fizemos algumas implantações das sequências com o comando CREATE SEQUENCE seguindo as nescessidades das regras de negócio, deixando também o comando DROP SEQUENCES para a exclusão. Na segunda imagem relacionada a SQL da pasta "Evidencia Implantacao"  (Imagem 2 SQL.png) mostra um pequeno trecho da criação e exclusão das sequências. 
+
+ETAPA 3:
+
+Escrevemos os componentes do grupo em um arquivo de texto, imprimimos os arquivos em pdf do modelo lógico e relacional e desse jeito salvamos os arquivos da atividade em uma pasta comprimida (.zip) e assim finalizamos. 
+
+NOTA: Não conseguimos salvar esse arquivo da evidênica em .docx, conseguimos salvar apenas em .txt.
+
